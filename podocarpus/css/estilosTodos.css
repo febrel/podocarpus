@@ -1,0 +1,327 @@
+
+
+:root{
+    /* Establesco colores */
+    --clr-text:#3d3d3d;
+    --clr-primary:#067E0A;
+    --clr-primary-dark:#125814;
+    --clr-accent: #613b6b;
+    --clr-accent-dark: #44264d;
+
+    /*Estilo letra*/
+    --ff-title: "Indie Flower", cursive;
+    --ff-serif: "Crismson Text", serif;
+    --ff-logo: "Pacifico", cursive;
+
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+}
+html{
+    box-sizing: border-box;
+    font-family:  var(--ff-serif);
+    color: var(--clr-text);
+    font-size: 1.25em;
+
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+section{
+    padding: 3em 1em; /*Pongo un espacio a las secciones*/
+}
+.mb-0{
+    margin-bottom: 0;
+
+}
+/*Tipografia*/
+h1,h2,h3,h3, p{
+    margin: 0;
+
+}
+p{
+    margin-bottom: 0.8em;
+}
+h2,h3{
+    font-family: var(--ff-title);
+    line-height: 0.8; /*Altura de linea*/
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+.section-title-small{
+    font-size: 3em;
+}
+
+.section-title-small small{
+    font-size: 0.7em;
+    display: block;
+}
+
+.text-primary{
+    color: var(--clr-primary);
+}
+
+.logo{
+    text-align: center;
+    
+}
+.logo a{
+    color: black;
+    text-decoration: none;
+    font-family: var(--ff-logo);
+}
+
+/*nav*/
+header{
+    padding: 1em 0 2em; /*Para espacio en titulo*/
+
+}
+
+/*Inicio Pagina*/
+.hero{
+    background-color: #555;
+    background-image: url(../images/log.jpg);
+    background-blend-mode: multiply; /*Mezcla el fondo*/
+    background-attachment: fixed; /*Hace el texto estaticoi*/
+    background-size: auto; /*Solo la imagen se mueve*/
+    color: white;
+    text-align: center;
+    padding: 15vh 1em;
+}
+
+.about-us{
+    background: var(--clr-accent);
+    display: flex; 
+    flex-direction: column; /*Bajo el contenido a columna*/
+    color: white;
+    padding: 0;
+}
+
+.about-us-intro{
+    background-image: url(../images/vinilos-infantiles-pizarra-buho-2.png);
+    background-repeat: no-repeat;
+    background-size: 450px; /*Solo la imagen se mueve*/
+    padding: 3em 1em;
+
+}
+
+
+.about-us-body{
+    padding: 1.5em 1em 3em;
+}
+
+.orden-online{
+    background: #e9e9e9;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product{
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 0 1em rgb(0,0,0,0.1);
+    max-width: 30rem; /*Tamaño maximo*/
+    margin: 0 auto;
+}
+
+.product:last-of-type{
+    margin-bottom: 2em;
+}
+.product-content{
+    padding: 1.5em;
+}
+
+.product-title{
+    color: var(--clr-primary);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+
+}
+.fintprint{
+    font-size: 0.75rem;
+    color: rgb(0, 0, 0,0.85);
+}
+/*Botones*/
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.btn{
+    padding: 0.75em 2.5em;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0.5em 0;
+    border-radius: 0.35em;
+    
+
+}
+
+
+.btn-primary{
+    background: var(--clr-primary);
+
+}
+.btn-primary:hover,
+.btn-primary:focus{
+    background: var(--clr-accent-dark);
+
+}
+
+.btn-accent{
+    background: var(--clr-accent);
+
+}
+.btn-accent:hover,
+.btn-accent:focus{
+    background: var(--clr-primary-dark);
+
+}
+
+/*footer*/
+footer{
+    background: #333;
+    padding: 1em 1em;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+
+}
+footer a{
+    color: inherit;
+}
+
+.footer-nav,
+.footer-social{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.footer-nav a{
+    padding: 0.50em;
+    text-decoration: none;
+
+}
+.footer-nav a:hover{
+    text-decoration: underline;
+}
+
+.social-link{
+    display: inline-block;
+    margin-bottom: 5px;
+
+}
+.social-icon{
+    width: 50px;
+
+}
+
+
+/*Responsivo*/
+@media only screen and (min-width: 750px) {
+    section{
+        padding: 6em 1em;
+
+    }
+    .btn-group{
+        margin-top: 2em;
+        flex-direction: row; /*Los pone vertical*/
+        justify-content: center;
+    }
+
+    .btn + .btn{
+        margin-left: 0.5em;
+    }
+
+    .about-us{
+        flex-direction: row;
+    }
+
+    .about-us-intro,
+    .about-us-body{
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 4em 2em;
+        justify-content: center;
+        
+    }
+    
+
+    .about-us-intro{
+        text-align: left;
+
+    }
+
+    .about-us-intro > *{
+        max-width: 25rem;
+        margin-left: auto;
+    }
+
+    .about-us-body{
+        text-align: left;
+
+    }
+
+    .about-us-body > *{ /*Desendientes directos*/
+        max-width: 25rem;
+        margin-left: auto;
+    }
+
+    .orden-online > *{
+        max-width: 70ch;
+       margin-left: auto;
+       margin-right: auto;
+        
+    }
+
+    .orden-online{
+        display: grid;/*Consultar*/
+
+    }
+
+    .products{
+        flex-direction: row;
+        max-width: 1300px;
+        padding:  0 5em;
+    }
+
+    .product{
+        margin: 0;
+        flex:  0 1 33%; /*Le da un tamaño*/
+
+    }
+
+    .product + .product{
+        margin-left: 2em; /*Lo pone a lado a los 3*/
+    }
+
+    .product:last-of-type{
+        margin-bottom: 0;/*Arreglo deslace de espacio*/
+    }
+} 
